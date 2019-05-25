@@ -1,10 +1,10 @@
 
 ## Start Android Emulator
 
-    # hardware accelerated
+    # make use of hardware acceleration
     docker run --name nexus-one -d -p 5555:5555 --device /dev/kvm chrisss404/android-emulator:latest
 
-    # software rendered
+    # use software rendering
     docker run --name nexus-one -d -p 5555:5555 chrisss404/android-emulator:latest
 
 
