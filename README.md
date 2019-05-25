@@ -1,8 +1,6 @@
 
-CI images of the Android emulator ready for instrumentation tests.
-
 | Tag              | Device        | Size    | Resolution | Density |
-| ---------------- | ------------- | -------:| ----------:| -------:|
+| ---------------- | ------------- | -------:| ----------:| ------- |
 | latest-nexus-one | Nexus One     | 3.4''   | 480x800    | hdpi    |
 | latest-nexus-5x  | Nexus 5x      | 5.2''   | 1080x1920  | 420dpi  |
 | latest-nexus-7   | Nexus 7       | 7.02''  | 1200x1920  | xhdpi   |
@@ -12,7 +10,6 @@ CI images of the Android emulator ready for instrumentation tests.
 ## Start Android Emulator
 
     # hardware accelerated
-    docker run --name nexus-one -d -p 5555:5555 --privileged chrisss404/android-emulator:latest-nexus-one
     docker run --name nexus-one -d -p 5555:5555 --device /dev/kvm chrisss404/android-emulator:latest-nexus-one
 
     # software rendered
