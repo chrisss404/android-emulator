@@ -1,19 +1,11 @@
 
-| Tag              | Device        | Size    | Resolution | Density |
-| ---------------- | ------------- | -------:| ----------:| ------- |
-| latest-nexus-one | Nexus One     | 3.4''   | 480x800    | hdpi    |
-| latest-nexus-5x  | Nexus 5x      | 5.2''   | 1080x1920  | 420dpi  |
-| latest-nexus-7   | Nexus 7       | 7.02''  | 1200x1920  | xhdpi   |
-| latest-nexus-10  | Nexus 10      | 10.05'' | 2560x1600  | xhdpi   |
-
-
 ## Start Android Emulator
 
     # hardware accelerated
-    docker run --name nexus-one -d -p 5555:5555 --device /dev/kvm chrisss404/android-emulator:latest-nexus-one
+    docker run --name nexus-one -d -p 5555:5555 --device /dev/kvm chrisss404/android-emulator:latest
 
     # software rendered
-    docker run --name nexus-one -d -p 5555:5555 chrisss404/android-emulator:latest-nexus-one
+    docker run --name nexus-one -d -p 5555:5555 chrisss404/android-emulator:latest
 
 
 ## List Connected Devices
