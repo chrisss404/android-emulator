@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y unzip wget libglu1 libpulse0 socat && \
 
 
 ARG ANDROID_DEVICE="Nexus One"
-ARG ANDROID_VERSION=28
+ARG ANDROID_VERSION=27
 
 USER android
 
