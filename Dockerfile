@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y unzip wget && \
 
 
 ARG ANDROID_DEVICE="Nexus One"
-ARG ANDROID_VERSION=29
+ARG ANDROID_VERSION=28
 
 USER android
 
