@@ -17,5 +17,6 @@
 
 ## Run Instrumentation Tests
 
-    ./gradlew connectedAndroidTest
+    $ adb connect 127.0.0.1:5555
+    $ ./gradlew connectedAndroidTest
 

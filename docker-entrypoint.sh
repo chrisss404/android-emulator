@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+# start cleanup job
+/usr/local/bin/supercronic ${ANDROID_HOME}/cleanup.cron &> /dev/null
+
 # forward adb port
 for ip in $(hostname -I); do
     socat tcp-listen:5555,bind=${ip},fork tcp:127.0.0.1:5555 &
