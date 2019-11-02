@@ -44,7 +44,6 @@ USER android
 RUN sdkmanager "platforms;android-${ANDROID_VERSION}" "system-images;android-${ANDROID_VERSION};google_apis;x86" && \
     rm ${ANDROID_HOME}/emulator/qemu/linux-x86_64/qemu-system-aarch64* && \
     rm ${ANDROID_HOME}/emulator/qemu/linux-x86_64/qemu-system-armel* && \
-    rm ${ANDROID_HOME}/emulator/qemu/linux-x86_64/qemu-system-i386* && \
     avdmanager create avd --name 'Emulator' --package "system-images;android-${ANDROID_VERSION};google_apis;x86" --device "${ANDROID_DEVICE}"
 
 
