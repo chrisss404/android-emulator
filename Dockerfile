@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y unzip wget && \
     echo "${SUPERCRONIC_SHA1SUM}  /usr/local/bin/supercronic" | sha1sum -c - && \
     chmod +x /usr/local/bin/supercronic && \
     # cleanup and get runtime dependencies
-    apt-get remove -y unzip wget && \
+    apt-get remove -y unzip wget && apt-get auto-remove -y && \
     apt-get install -y libfontconfig libglu1 libnss3-dev libxcomposite1 libxcursor1 libpulse0 libasound2 socat && \
     rm -rf /var/lib/apt/lists/* && \
     # create unprivileged user
@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y unzip wget && \
 
 
 ARG ANDROID_DEVICE="Nexus One"
-ARG ANDROID_VERSION=28
+ARG ANDROID_VERSION=29
 
 USER android
 
