@@ -2,7 +2,7 @@
 set -e
 
 # start cleanup job
-/usr/local/bin/supercronic ${ANDROID_HOME}/cleanup.cron &> /dev/null
+/usr/local/bin/supercronic ${ANDROID_SDK_ROOT}/cleanup.cron &> /dev/null
 
 # forward adb port
 for ip in $(hostname -I); do
